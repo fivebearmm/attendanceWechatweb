@@ -1,0 +1,60 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange" >
+
+    <view class="{{showOneView?'header_view_show':'header_view_hide'}}">
+
+        <view class="order_main">
+            <view 
+            wx:for="{{status}}"
+            wx:key="attendanceId"
+            class="order_item">
+                <view class="order_no_row">
+                    <view class="order_no_text">出勤编号</view>
+                    <view class="order_no_value">{{item.attendanceId}}</view>
+                </view>
+                <view class="order_time_row">
+                    <view class="order_time_text">打卡开始时间</view>
+                    <view class="order_time_value">{{item.attendanceStart}}</view>
+                </view>
+                <view class="order_time_row">
+                    <view class="order_time_text">打卡结束时间</view>
+                    <view class="order_time_value">{{item.attendanceEnd}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+
+    <view class="{{showOneView?'header_view_hide':'header_view_show'}}">
+
+        <view class="order_main">
+            <view 
+                wx:for="{{monthStatus}}"
+                wx:for-index="groupindex">
+                <view 
+                wx:for="{{monthStatus[groupindex]}}"
+                wx:for-index="itemindex"
+                wx:key="lattendanceId"
+                class="order_item">
+                    <view class="order_no_row">
+                        <view class="order_no_text">出勤编号</view>
+                        <view class="order_no_value">{{item.lattendanceId}}</view>
+                    </view>
+                    <view class="order_no_row">
+                        <view class="order_no_text">缺勤情况</view>
+                        <view class="order_no_value">{{item.leaveType}}</view>
+                    </view>
+                    <view class="order_time_row">
+                        <view class="order_time_text">打卡开始时间</view>
+                        <view class="order_time_value">{{item.leaveStart}}</view>
+                    </view>
+                    <view class="order_time_row">
+                        <view class="order_time_text">打卡结束时间</view>
+                        <view class="order_time_value">{{item.leaveEnd}}</view>
+                    </view>
+                </view>
+             </view>
+        </view>
+    </view>
+
+</Tabs>

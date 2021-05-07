@@ -1,0 +1,27 @@
+<view>
+   <canvas class='canvas' canvas-id='myCanvas'>
+     <image class="bg" src="/static/images/personal/dmu.jpg"></image>
+   </canvas>
+
+    <!-- 导航 开始 -->
+  <view class="index_cate">
+    <navigator
+       url="/pages/record/index"
+       open-type="switchTab">
+        <image mode="widthFix" src="/img/record.png"></image>
+        <view class="username">考勤记录</view>
+    </navigator>
+     <navigator
+      url="/pages/rule/index">
+        <image mode="widthFix" src="/img/rule.png"></image>
+        <view class="username">考勤规则</view>
+    </navigator>
+     <navigator
+      url="/pages/intro/index">
+        <image mode="widthFix" src="/img/intro.png"></image>
+        <view class="username">公司简介</view>
+    </navigator>
+  </view>
+  <!-- 导航 结束 -->
+</view>
+  
